@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property NSInteger tapCount;
 @end
 
 @implementation ViewController
@@ -22,6 +22,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)buttonPressed:(id)sender {
+    self.tapCount++;
+    self.myLabel.text = [NSString stringWithFormat:@"Count: %li", self.tapCount];
 }
 
 @end
